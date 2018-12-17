@@ -2,8 +2,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Runner {
-    private static final int SIZE_RANGE_NUMBERS = 36;
-    private static final int COUNT_NUMBER_OF_PLAYED = 5;
+    private static final int SIZE_RANGE_NUMBERS = 49;
+    private static final int COUNT_NUMBER_OF_PLAYED = 6;
     private static final int COUNT_TICKETS = 1000000;
 
     public static void main(String[] args) {

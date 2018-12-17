@@ -25,7 +25,11 @@ public class RevealWinners {
     public void setWinNumber(int winNumber) {
         this.winNumber = winNumber;
         winNumbers.add(winNumber);
-        matchWinNumbersInTickets();
+        for (Ticket ticket : tickets) {
+            if (ticket.getNumbers() != null && ticket.getNumbers().contains(winNumber)) {
+                ticket.getNumbersMatchTheWinning().add(winNumber);
+            }
+        }
     }
 
     public void printWinners() {
@@ -42,10 +46,6 @@ public class RevealWinners {
     }
 
     private void matchWinNumbersInTickets() {
-        for (Ticket ticket : tickets) {
-            if (ticket.getNumbers() != null && ticket.getNumbers().contains(winNumber)) {
-                ticket.getNumbersMatchTheWinning().add(winNumber);
-            }
-        }
+
     }
 }
