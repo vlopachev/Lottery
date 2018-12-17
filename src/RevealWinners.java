@@ -45,7 +45,6 @@ public class RevealWinners {
         for (Ticket ticket : tickets) {
             if (ticket.getNumbers() != null && ticket.getNumbers().contains(winNumber)) {
                 ticket.getNumbersMatchTheWinning().add(winNumber);
-                ticket.setWin(true);
             }
         }
     }

@@ -7,7 +7,6 @@ public class Ticket {
     private long id;
     private Set<Integer> numbers;
     private Set<Integer> numbersMatchTheWinning = new HashSet<>();
-    private boolean isWin;
 
     public Ticket() {
         id = ++counterId;
@@ -24,14 +23,6 @@ public class Ticket {
 
     public void setNumbers(Set<Integer> numbers) {
         this.numbers = numbers;
-    }
-
-    public boolean isWin() {
-        return isWin;
-    }
-
-    public void setWin(boolean win) {
-        isWin = win;
     }
 
     public long getId() {
@@ -64,8 +55,6 @@ public class Ticket {
         return "Ticket{" +
                 "id=" + id +
                 ", numbers=" + numbers +
-                ", numbersMatchTheWinning=" + numbersMatchTheWinning +
-                ", isWin=" + isWin +
-                '}';
+                ", numbersMatchTheWinning=" + numbersMatchTheWinning;
     }
 }
