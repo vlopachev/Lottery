@@ -44,8 +44,4 @@ public class RevealWinners {
             System.out.println(pair.getKey() + ": " + pair.getValue());
         }
     }
-
-    private void matchWinNumbersInTickets() {
-
-    }
 }
