@@ -17,20 +17,19 @@ public class Runner {
             tickets.add(new Ticket(generator.generate(COUNT_NUMBER_OF_PLAYED)));
         }
 
-        RevealWinners winners = new RevealWinners();
+        RevealWinner revealWinner = new RevealWinner();
 
-        winners.setTickets(tickets);
+        revealWinner.setTickets(tickets);
 
         Wheel wheel = new Wheel(SIZE_RANGE_NUMBERS);
 
-
         for (int i = 1; i <= COUNT_NUMBER_OF_PLAYED; i++) {
-            winners.setWinNumber(wheel.getWinNumber());
+            revealWinner.setWinNumber(wheel.getWinNumber());
         }
 
-        winners.printWinners();
+        revealWinner.printWinners();
 
-         long stopTime = System.currentTimeMillis();
+        long stopTime = System.currentTimeMillis();
 
         System.out.println(stopTime - startTime);
 

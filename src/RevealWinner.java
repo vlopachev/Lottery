@@ -1,9 +1,8 @@
 import java.util.*;
 
-public class RevealWinners {
+public class RevealWinner {
     private Set<Integer> winNumbers = new LinkedHashSet<>();
     private Set<Ticket> tickets;
-    private int winNumber;
     private Map<Integer, Integer> countWinners = new HashMap<>();
 
     public Set<Ticket> getTickets() {
@@ -18,12 +17,7 @@ public class RevealWinners {
         return winNumbers;
     }
 
-    public int getWinNumber() {
-        return winNumber;
-    }
-
     public void setWinNumber(int winNumber) {
-        this.winNumber = winNumber;
         winNumbers.add(winNumber);
         for (Ticket ticket : tickets) {
             if (ticket.getNumbers() != null && ticket.getNumbers().contains(winNumber)) {
